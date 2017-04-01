@@ -3,10 +3,12 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
+    sleep @interval
   end
 
   def show
     @message_ids = @user.messages.map(&:id)
+    sleep @interval
   end
 
   private
